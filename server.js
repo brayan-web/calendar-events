@@ -203,6 +203,10 @@ app.get("/", (req, res) => {
   res.send("¡Todo está bien! La API está funcionando correctamente.");
 });
 
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
